@@ -37,7 +37,10 @@ final class UnderBarTabView: UIView, NibOwnerLoadable {
     
     private var type: UnderBarTabWidthType = .fixed(width: 0)
     private var texts: [String] = []
-    
+}
+
+// MARK: - Public
+extension UnderBarTabView {
     func setup(type: UnderBarTabWidthType) {
         self.type = type
         self.barView.backgroundColor = self.underBarColor
@@ -62,9 +65,10 @@ final class UnderBarTabView: UIView, NibOwnerLoadable {
     }
 }
 
-extension UnderBarTabView {
+// MARK: - Private
+fileprivate extension UnderBarTabView {
     
-    fileprivate func moveUnderBar() {
+    func moveUnderBar() {
         guard let attributes = self.collectionView.layoutAttributesForItem(at: IndexPath(item: self.selectedIndex, section: 0)) else {
             return
         }

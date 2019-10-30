@@ -26,6 +26,9 @@
 		D64B187023696BF0006756CA /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D64B186F23696BF0006756CA /* RxRelay.framework */; };
 		D64B187123696BF0006756CA /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D64B186F23696BF0006756CA /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D64B187323696C8B006756CA /* UnderBarTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64B187223696C8B006756CA /* UnderBarTabView.xib */; };
+		D64B187523697E95006756CA /* UnderBarInfiniteTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B187423697E95006756CA /* UnderBarInfiniteTabView.swift */; };
+		D64B187723698052006756CA /* UnderBarInfiniteTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64B187623698052006756CA /* UnderBarInfiniteTabView.xib */; };
+		D64B187923698285006756CA /* SelectTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B187823698285006756CA /* SelectTypeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +66,9 @@
 		D64B186C2369606E006756CA /* Reusable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reusable.framework; path = Carthage/Build/iOS/Reusable.framework; sourceTree = "<group>"; };
 		D64B186F23696BF0006756CA /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		D64B187223696C8B006756CA /* UnderBarTabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnderBarTabView.xib; sourceTree = "<group>"; };
+		D64B187423697E95006756CA /* UnderBarInfiniteTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderBarInfiniteTabView.swift; sourceTree = "<group>"; };
+		D64B187623698052006756CA /* UnderBarInfiniteTabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnderBarInfiniteTabView.xib; sourceTree = "<group>"; };
+		D64B187823698285006756CA /* SelectTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTypeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,7 @@
 		D64B185923692CB6006756CA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D64B187823698285006756CA /* SelectTypeViewController.swift */,
 				D64B184723692C60006756CA /* ViewController.swift */,
 				D64B184923692C60006756CA /* Main.storyboard */,
 			);
@@ -144,6 +151,8 @@
 				D64B185F23693456006756CA /* UnderBarTabWidthType.swift */,
 				D64B1861236934F0006756CA /* UnderBarTabView.swift */,
 				D64B187223696C8B006756CA /* UnderBarTabView.xib */,
+				D64B187423697E95006756CA /* UnderBarInfiniteTabView.swift */,
+				D64B187623698052006756CA /* UnderBarInfiniteTabView.xib */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -220,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D64B185023692C62006756CA /* LaunchScreen.storyboard in Resources */,
+				D64B187723698052006756CA /* UnderBarInfiniteTabView.xib in Resources */,
 				D64B184D23692C62006756CA /* Assets.xcassets in Resources */,
 				D64B184B23692C60006756CA /* Main.storyboard in Resources */,
 				D64B185E236932ED006756CA /* UnderBarTabCell.xib in Resources */,
@@ -261,10 +271,12 @@
 			files = (
 				D64B184823692C60006756CA /* ViewController.swift in Sources */,
 				D64B1862236934F0006756CA /* UnderBarTabView.swift in Sources */,
+				D64B187923698285006756CA /* SelectTypeViewController.swift in Sources */,
 				D64B186023693456006756CA /* UnderBarTabWidthType.swift in Sources */,
 				D64B184423692C60006756CA /* AppDelegate.swift in Sources */,
 				D64B184623692C60006756CA /* SceneDelegate.swift in Sources */,
 				D64B185C23692E2C006756CA /* UnderBarTabCell.swift in Sources */,
+				D64B187523697E95006756CA /* UnderBarInfiniteTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

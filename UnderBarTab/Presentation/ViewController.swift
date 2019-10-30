@@ -11,7 +11,7 @@ import RxSwift
 
 class ViewController: UIViewController {
 
-    @IBOutlet private weak var tabView: UnderBarTabView!
+    @IBOutlet private weak var tabView: UnderBarInfiniteTabView!
     @IBOutlet private weak var scrollView: UIScrollView!
     
     let disposeBag = DisposeBag()
