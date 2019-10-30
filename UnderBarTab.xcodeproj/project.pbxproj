@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D64B184423692C60006756CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B184323692C60006756CA /* AppDelegate.swift */; };
 		D64B184623692C60006756CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B184523692C60006756CA /* SceneDelegate.swift */; };
-		D64B184823692C60006756CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B184723692C60006756CA /* ViewController.swift */; };
+		D64B184823692C60006756CA /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B184723692C60006756CA /* SampleViewController.swift */; };
 		D64B184B23692C60006756CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64B184923692C60006756CA /* Main.storyboard */; };
 		D64B184D23692C62006756CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D64B184C23692C62006756CA /* Assets.xcassets */; };
 		D64B185023692C62006756CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64B184E23692C62006756CA /* LaunchScreen.storyboard */; };
@@ -52,7 +52,7 @@
 		D64B184023692C60006756CA /* UnderBarTab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderBarTab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D64B184323692C60006756CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D64B184523692C60006756CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D64B184723692C60006756CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D64B184723692C60006756CA /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		D64B184A23692C60006756CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D64B184C23692C62006756CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D64B184F23692C62006756CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				D64B187823698285006756CA /* SelectTypeViewController.swift */,
-				D64B184723692C60006756CA /* ViewController.swift */,
+				D64B184723692C60006756CA /* SampleViewController.swift */,
 				D64B184923692C60006756CA /* Main.storyboard */,
 			);
 			path = Presentation;
@@ -269,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D64B184823692C60006756CA /* ViewController.swift in Sources */,
+				D64B184823692C60006756CA /* SampleViewController.swift in Sources */,
 				D64B1862236934F0006756CA /* UnderBarTabView.swift in Sources */,
 				D64B187923698285006756CA /* SelectTypeViewController.swift in Sources */,
 				D64B186023693456006756CA /* UnderBarTabWidthType.swift in Sources */,
