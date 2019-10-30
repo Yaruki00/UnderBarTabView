@@ -9,8 +9,8 @@
 
 ## 依存
 内部でRxSwiftとReusableを利用しています。  
-![RxSwift](https://github.com/ReactiveX/RxSwift)  
-![Reusable](https://github.com/AliSoftware/Reusable)
+[RxSwift](https://github.com/ReactiveX/RxSwift)  
+[Reusable](https://github.com/AliSoftware/Reusable)
 
 ## ディレクトリ構成(重要な箇所だけ)
 `UnderBarTab/Library/` タブのコードが入ってます。  
