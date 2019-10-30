@@ -13,7 +13,37 @@
 		D64B184B23692C60006756CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64B184923692C60006756CA /* Main.storyboard */; };
 		D64B184D23692C62006756CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D64B184C23692C62006756CA /* Assets.xcassets */; };
 		D64B185023692C62006756CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64B184E23692C62006756CA /* LaunchScreen.storyboard */; };
+		D64B185C23692E2C006756CA /* UnderBarTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B185B23692E2C006756CA /* UnderBarTabCell.swift */; };
+		D64B185E236932ED006756CA /* UnderBarTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64B185D236932ED006756CA /* UnderBarTabCell.xib */; };
+		D64B186023693456006756CA /* UnderBarTabWidthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B185F23693456006756CA /* UnderBarTabWidthType.swift */; };
+		D64B1862236934F0006756CA /* UnderBarTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B1861236934F0006756CA /* UnderBarTabView.swift */; };
+		D64B186523693DE5006756CA /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D64B186423693DE4006756CA /* RxCocoa.framework */; };
+		D64B186623693DE5006756CA /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D64B186423693DE4006756CA /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D64B186923693DF5006756CA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D64B186823693DF5006756CA /* RxSwift.framework */; };
+		D64B186A23693DF5006756CA /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D64B186823693DF5006756CA /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D64B186D2369606E006756CA /* Reusable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D64B186C2369606E006756CA /* Reusable.framework */; };
+		D64B186E2369606E006756CA /* Reusable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D64B186C2369606E006756CA /* Reusable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D64B187023696BF0006756CA /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D64B186F23696BF0006756CA /* RxRelay.framework */; };
+		D64B187123696BF0006756CA /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D64B186F23696BF0006756CA /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D64B187323696C8B006756CA /* UnderBarTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64B187223696C8B006756CA /* UnderBarTabView.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D64B186723693DE5006756CA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D64B187123696BF0006756CA /* RxRelay.framework in Embed Frameworks */,
+				D64B186A23693DF5006756CA /* RxSwift.framework in Embed Frameworks */,
+				D64B186623693DE5006756CA /* RxCocoa.framework in Embed Frameworks */,
+				D64B186E2369606E006756CA /* Reusable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D64B184023692C60006756CA /* UnderBarTab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderBarTab.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +54,15 @@
 		D64B184C23692C62006756CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D64B184F23692C62006756CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D64B185123692C62006756CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D64B185B23692E2C006756CA /* UnderBarTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderBarTabCell.swift; sourceTree = "<group>"; };
+		D64B185D236932ED006756CA /* UnderBarTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnderBarTabCell.xib; sourceTree = "<group>"; };
+		D64B185F23693456006756CA /* UnderBarTabWidthType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderBarTabWidthType.swift; sourceTree = "<group>"; };
+		D64B1861236934F0006756CA /* UnderBarTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderBarTabView.swift; sourceTree = "<group>"; };
+		D64B186423693DE4006756CA /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		D64B186823693DF5006756CA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		D64B186C2369606E006756CA /* Reusable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reusable.framework; path = Carthage/Build/iOS/Reusable.framework; sourceTree = "<group>"; };
+		D64B186F23696BF0006756CA /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		D64B187223696C8B006756CA /* UnderBarTabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnderBarTabView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D64B187023696BF0006756CA /* RxRelay.framework in Frameworks */,
+				D64B186923693DF5006756CA /* RxSwift.framework in Frameworks */,
+				D64B186523693DE5006756CA /* RxCocoa.framework in Frameworks */,
+				D64B186D2369606E006756CA /* Reusable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +85,7 @@
 			children = (
 				D64B184223692C60006756CA /* UnderBarTab */,
 				D64B184123692C60006756CA /* Products */,
+				D64B186323693DE4006756CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +100,63 @@
 		D64B184223692C60006756CA /* UnderBarTab */ = {
 			isa = PBXGroup;
 			children = (
+				D64B185723692C7D006756CA /* Application */,
+				D64B185923692CB6006756CA /* Presentation */,
+				D64B185823692C9A006756CA /* Resource */,
+				D64B185A23692D37006756CA /* Library */,
+			);
+			path = UnderBarTab;
+			sourceTree = "<group>";
+		};
+		D64B185723692C7D006756CA /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				D64B184323692C60006756CA /* AppDelegate.swift */,
 				D64B184523692C60006756CA /* SceneDelegate.swift */,
-				D64B184723692C60006756CA /* ViewController.swift */,
-				D64B184923692C60006756CA /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D64B185823692C9A006756CA /* Resource */ = {
+			isa = PBXGroup;
+			children = (
 				D64B184C23692C62006756CA /* Assets.xcassets */,
 				D64B184E23692C62006756CA /* LaunchScreen.storyboard */,
 				D64B185123692C62006756CA /* Info.plist */,
 			);
-			path = UnderBarTab;
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D64B185923692CB6006756CA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D64B184723692C60006756CA /* ViewController.swift */,
+				D64B184923692C60006756CA /* Main.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D64B185A23692D37006756CA /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				D64B185B23692E2C006756CA /* UnderBarTabCell.swift */,
+				D64B185D236932ED006756CA /* UnderBarTabCell.xib */,
+				D64B185F23693456006756CA /* UnderBarTabWidthType.swift */,
+				D64B1861236934F0006756CA /* UnderBarTabView.swift */,
+				D64B187223696C8B006756CA /* UnderBarTabView.xib */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		D64B186323693DE4006756CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D64B186F23696BF0006756CA /* RxRelay.framework */,
+				D64B186C2369606E006756CA /* Reusable.framework */,
+				D64B186823693DF5006756CA /* RxSwift.framework */,
+				D64B186423693DE4006756CA /* RxCocoa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +169,8 @@
 				D64B183C23692C60006756CA /* Sources */,
 				D64B183D23692C60006756CA /* Frameworks */,
 				D64B183E23692C60006756CA /* Resources */,
+				D64B186723693DE5006756CA /* Embed Frameworks */,
+				D64B186B23693E07006756CA /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -128,10 +222,37 @@
 				D64B185023692C62006756CA /* LaunchScreen.storyboard in Resources */,
 				D64B184D23692C62006756CA /* Assets.xcassets in Resources */,
 				D64B184B23692C60006756CA /* Main.storyboard in Resources */,
+				D64B185E236932ED006756CA /* UnderBarTabCell.xib in Resources */,
+				D64B187323696C8B006756CA /* UnderBarTabView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D64B186B23693E07006756CA /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Reusable.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D64B183C23692C60006756CA /* Sources */ = {
@@ -139,8 +260,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D64B184823692C60006756CA /* ViewController.swift in Sources */,
+				D64B1862236934F0006756CA /* UnderBarTabView.swift in Sources */,
+				D64B186023693456006756CA /* UnderBarTabWidthType.swift in Sources */,
 				D64B184423692C60006756CA /* AppDelegate.swift in Sources */,
 				D64B184623692C60006756CA /* SceneDelegate.swift in Sources */,
+				D64B185C23692E2C006756CA /* UnderBarTabCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +410,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X5EF57U232;
-				INFOPLIST_FILE = UnderBarTab/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = UnderBarTab/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +432,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X5EF57U232;
-				INFOPLIST_FILE = UnderBarTab/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = UnderBarTab/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
