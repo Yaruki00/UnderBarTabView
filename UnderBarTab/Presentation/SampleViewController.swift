@@ -36,16 +36,35 @@ extension SampleViewController {
     private func setupTabView() {
         switch self.type {
         case .normal:
+            
             self.tabView.isHidden = false
             self.infiniteTabView.isHidden = true
         case .infinite:
             self.tabView.isHidden = true
             self.infiniteTabView.isHidden = false
         }
-        self.tabView.setup(type: .fixed(width: UIScreen.main.bounds.width / 5))
-        self.infiniteTabView.setup(type: .fixed(width: UIScreen.main.bounds.width / 5))
+        self.setupNoLoopTabView()
+        self.setupLoopTabView()
+    }
+    
+    private func setupNoLoopTabView() {
+        let cellConfig = UnderBarTabCellConfig(
+            normalTextColor: .gray,
+            selectedTextColor: .blue,
+            emphasisTextColor: .cyan
+        )
+        let config = UnderBarTabViewConfig(
+            type: .fixed(width: UIScreen.main.bounds.width / 5),
+            emphasisIndex: 2,
+            cellConfig: cellConfig
+        )
+        self.tabView.setup(config: config)
         self.tabView.setData(["1", "2", "3", "4", "5"])
-        self.infiniteTabView.setData(["1", "2", "3", "4", "5"])
+    }
+    
+    private func setupLoopTabView() {
+        self.infiniteTabView.setup()
+        self.infiniteTabView.setData(["1", "222", "33333", "4444444", "555555555"])
     }
     
     private func bind() {

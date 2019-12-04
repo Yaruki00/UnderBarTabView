@@ -24,8 +24,6 @@ final class UnderBarTabView: UIView, NibOwnerLoadable {
         loadNibContent()
     }
     
-    var underBarColor = UIColor.blue
-    
     @IBOutlet fileprivate weak var collectionView: UICollectionView! {
         willSet {
             newValue.register(cellType: UnderBarTabCell.self)
@@ -35,15 +33,18 @@ final class UnderBarTabView: UIView, NibOwnerLoadable {
     
     fileprivate var selectedIndex = 0
     
-    private var type: UnderBarTabWidthType = .fixed(width: 0)
+    private var config = UnderBarTabViewConfig()
     private var texts: [String] = []
 }
 
 // MARK: - Public
 extension UnderBarTabView {
-    func setup(type: UnderBarTabWidthType) {
-        self.type = type
-        self.barView.backgroundColor = self.underBarColor
+    
+    func setup(config: UnderBarTabViewConfig? = nil) {
+        if let config = config {
+            self.config = config
+        }
+        self.barView.backgroundColor = self.config.underBarColor
     }
     
     func setData(_ texts: [String], initialIndex: Int? = nil) {
@@ -55,11 +56,8 @@ extension UnderBarTabView {
             },
             completion: { _ in
                 self.barView.frame.origin.y = self.collectionView.bounds.height - self.barView.bounds.height
-                if let index = initialIndex {
-                    self.rx.selectedIndex.onNext(index)
-                } else {
-                    self.moveUnderBar()
-                }
+                let index = initialIndex ?? 0
+                self.rx.selectedIndex.onNext(index)
             }
         )
     }
@@ -92,7 +90,9 @@ extension UnderBarTabView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: UnderBarTabCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.setData(text: self.texts[indexPath.item])
-        cell.setSelected(indexPath.item == self.selectedIndex)
+        cell.setAppearance(self.config.cellConfig,
+                           isSelected: indexPath.item == self.selectedIndex,
+                           isEmphasis: indexPath.item == self.config.emphasisIndex)
         return cell
     }
 }
@@ -106,14 +106,22 @@ extension UnderBarTabView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        switch self.type {
+        switch self.config.type {
         case .fixed(width: let width):
             return CGSize(width: width, height: self.bounds.height)
         case .flexible(margin: let margin):
             let text = self.texts[indexPath.item]
-            let textWidth = UnderBarTabCell.width(for: text)
+            let textWidth = UnderBarTabCell.width(for: text, font: self.config.cellConfig.selectedTextFont)
             return CGSize(width: textWidth + margin * 2, height: self.bounds.height)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return self.config.insets
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return self.config.itemSpacing
     }
 }
 
@@ -128,8 +136,10 @@ extension Reactive where Base: UnderBarTabView {
         return Binder(base) { view, value in
             let oldValue = view.selectedIndex
             view.selectedIndex = value
-            view.collectionView.reloadItems(at: [IndexPath(item: oldValue, section: 0)])
-            view.collectionView.reloadItems(at: [IndexPath(item: value, section: 0)])
+            view.collectionView.reloadItems(at: [
+                IndexPath(item: oldValue, section: 0),
+                IndexPath(item: value, section: 0)
+            ])
             view.collectionView.scrollToItem(at: IndexPath(item: value, section: 0), at: .centeredHorizontally, animated: true)
             view.moveUnderBar()
         }

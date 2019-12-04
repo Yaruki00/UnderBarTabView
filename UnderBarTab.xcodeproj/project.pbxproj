@@ -29,6 +29,7 @@
 		D64B187523697E95006756CA /* UnderBarInfiniteTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B187423697E95006756CA /* UnderBarInfiniteTabView.swift */; };
 		D64B187723698052006756CA /* UnderBarInfiniteTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64B187623698052006756CA /* UnderBarInfiniteTabView.xib */; };
 		D64B187923698285006756CA /* SelectTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B187823698285006756CA /* SelectTypeViewController.swift */; };
+		D69F9D962397B6660065DBFE /* UnderBarTabConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F9D952397B6660065DBFE /* UnderBarTabConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +70,7 @@
 		D64B187423697E95006756CA /* UnderBarInfiniteTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderBarInfiniteTabView.swift; sourceTree = "<group>"; };
 		D64B187623698052006756CA /* UnderBarInfiniteTabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnderBarInfiniteTabView.xib; sourceTree = "<group>"; };
 		D64B187823698285006756CA /* SelectTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTypeViewController.swift; sourceTree = "<group>"; };
+		D69F9D952397B6660065DBFE /* UnderBarTabConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderBarTabConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				D64B187223696C8B006756CA /* UnderBarTabView.xib */,
 				D64B187423697E95006756CA /* UnderBarInfiniteTabView.swift */,
 				D64B187623698052006756CA /* UnderBarInfiniteTabView.xib */,
+				D69F9D952397B6660065DBFE /* UnderBarTabConfig.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				D64B1862236934F0006756CA /* UnderBarTabView.swift in Sources */,
 				D64B187923698285006756CA /* SelectTypeViewController.swift in Sources */,
 				D64B186023693456006756CA /* UnderBarTabWidthType.swift in Sources */,
+				D69F9D962397B6660065DBFE /* UnderBarTabConfig.swift in Sources */,
 				D64B184423692C60006756CA /* AppDelegate.swift in Sources */,
 				D64B184623692C60006756CA /* SceneDelegate.swift in Sources */,
 				D64B185C23692E2C006756CA /* UnderBarTabCell.swift in Sources */,

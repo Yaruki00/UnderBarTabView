@@ -37,14 +37,16 @@ final class UnderBarInfiniteTabView: UIView, NibOwnerLoadable {
     fileprivate var selectedIndex = 0
     fileprivate var texts: [String] = []
     
-    private var type: UnderBarTabWidthType = .fixed(width: 0)
+    private var config = UnderBarTabViewConfig()
 }
 
 // MARK: - Public
 extension UnderBarInfiniteTabView {
     
-    func setup(type: UnderBarTabWidthType) {
-        self.type = type
+    func setup(config: UnderBarTabViewConfig? = nil) {
+        if let config = config {
+            self.config = config
+        }
         self.barView.backgroundColor = self.underBarColor
     }
     
@@ -96,7 +98,9 @@ extension UnderBarInfiniteTabView: UICollectionViewDataSource {
         let selectedIndex = self.selectedIndex % self.texts.count
         let cell: UnderBarTabCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.setData(text: self.texts[index])
-        cell.setSelected(index == selectedIndex)
+        cell.setAppearance(self.config.cellConfig,
+                           isSelected: index == selectedIndex,
+                           isEmphasis: index == self.config.emphasisIndex)
         return cell
     }
 }
@@ -110,15 +114,23 @@ extension UnderBarInfiniteTabView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        switch self.type {
+        switch self.config.type {
         case .fixed(width: let width):
             return CGSize(width: width, height: self.bounds.height)
         case .flexible(margin: let margin):
             let index = indexPath.item % self.texts.count
             let text = self.texts[index]
-            let textWidth = UnderBarTabCell.width(for: text)
+            let textWidth = UnderBarTabCell.width(for: text, font: self.config.cellConfig.selectedTextFont)
             return CGSize(width: textWidth + margin * 2, height: self.bounds.height)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return self.config.insets
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return self.config.itemSpacing
     }
 }
 
@@ -153,9 +165,7 @@ extension Reactive where Base: UnderBarInfiniteTabView {
             view.collectionView.reloadItems(at: [
                 IndexPath(item: oldValue, section: 0),
                 IndexPath(item: oldValue + count, section: 0),
-                IndexPath(item: oldValue + count * 2, section: 0)
-            ])
-            view.collectionView.reloadItems(at: [
+                IndexPath(item: oldValue + count * 2, section: 0),
                 IndexPath(item: newValue, section: 0),
                 IndexPath(item: newValue + count, section: 0),
                 IndexPath(item: newValue + count * 2, section: 0)

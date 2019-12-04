@@ -23,15 +23,10 @@ final class UnderBarTabCell: UICollectionViewCell, NibReusable {
         reuseDisposeBag = DisposeBag()
     }
     
-    static var normalTextColor = UIColor.lightGray
-    static var selectedTextColor = UIColor.black
-    static var normalFont = UIFont(name: "HiraginoSans-W3", size: 12.0)
-    static var selectedFont = UIFont(name: "HiraginoSans-W6", size: 13.0)
-    
-    static func width(for text: String) -> CGFloat {
+    static func width(for text: String, font: UIFont) -> CGFloat {
         let label = UILabel()
-        label.font = UnderBarTabCell.selectedFont
         label.text = text
+        label.font = font
         label.sizeToFit()
         return label.bounds.width
     }
@@ -40,8 +35,8 @@ final class UnderBarTabCell: UICollectionViewCell, NibReusable {
         self.label.text = text
     }
     
-    func setSelected(_ isSelected: Bool) {
-        self.label.textColor = isSelected ? UnderBarTabCell.selectedTextColor : UnderBarTabCell.normalTextColor
-        self.label.font = isSelected ? UnderBarTabCell.selectedFont : UnderBarTabCell.normalFont
+    func setAppearance(_ config: UnderBarTabCellConfig, isSelected: Bool, isEmphasis: Bool) {
+        self.label.textColor = isSelected ? config.selectedTextColor : isEmphasis ? config.emphasisTextColor : config.normalTextColor
+        self.label.font = isSelected ? config.selectedTextFont : config.normalTextFont
     }
 }
