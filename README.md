@@ -18,7 +18,7 @@
 
 ## カスタマイズ
 `UnderBarTabViewConfig`と`UnderBarTabCellConfig`のconfigクラスがあります。
-```
+```Swift
 /// ビュー全体の設定
 struct UnderBarTabViewConfig {
     /// .fixed(width:) ⇒ すべてのタブは固定幅、.flexible(margin:) ⇒ 文字列の幅に応じてタブの幅も可変
