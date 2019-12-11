@@ -44,6 +44,7 @@ extension UnderBarTabView {
         if let config = config {
             self.config = config
         }
+        self.collectionView.addSubview(self.barView)
         self.barView.backgroundColor = self.config.underBarColor
     }
     
@@ -55,7 +56,7 @@ extension UnderBarTabView {
                 self.collectionView.reloadData()
             },
             completion: { _ in
-                self.barView.frame.origin.y = self.collectionView.bounds.height - self.barView.bounds.height
+                self.barView.frame.origin.y = self.bounds.height - self.barView.bounds.height
                 let index = initialIndex ?? 0
                 self.rx.selectedIndex.onNext(index)
             }
